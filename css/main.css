@@ -8,7 +8,7 @@
 
 body {
   margin: 0;
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
   line-height: 1.6;
 }
 
@@ -34,12 +34,23 @@ p {
 .btn {
   display: inline-block;
   text-decoration: none;
-  color: white;
+  color: var(--clr-text, #fff);
   font-weight: 700;
   text-transform: uppercase;
   font-size: 1.125rem;
-  padding: .5em 1.25em;
-  background: blue;
-  border-radius: .25em;
+  padding: 0.5em 1.25em;
+  background: var(--clr-accent, blue);
+  border-radius: 0.25em;
+  -webkit-transition: opacity 250ms linear, -webkit-transform 250ms ease-in-out;
+  transition: opacity 250ms linear, -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, opacity 250ms linear;
+  transition: transform 250ms ease-in-out, opacity 250ms linear, -webkit-transform 250ms ease-in-out;
+}
+
+.btn:hover,
+.btn:focus {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  opacity: 0.9;
 }
 /*# sourceMappingURL=main.css.map */
